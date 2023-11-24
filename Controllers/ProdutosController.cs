@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MercadoIGL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MercadoIGL.Controllers
 {
+    [Authorize]
     public class ProdutosController : Controller
     {
         private readonly Contexto _context;
@@ -19,6 +21,7 @@ namespace MercadoIGL.Controllers
         }
 
         // GET: Produtos
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             var contexto = _context.Produtos.Include(p => p.fornecedor);
