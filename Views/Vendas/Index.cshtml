@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MercadoIGL.Models.Venda>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.produto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcionario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.valorTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.produto.descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cliente.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcionario.cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valorTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.idVenda">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.idVenda">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.idVenda">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
