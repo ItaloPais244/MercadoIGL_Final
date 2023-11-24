@@ -8,6 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Querry\Vendas.CSHTML" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\QrsContoller\Create.cshtml" />
+    <None Include="Views\QrsContoller\Delete.cshtml" />
+    <None Include="Views\QrsContoller\Details.cshtml" />
+    <None Include="Views\QrsContoller\Edit.cshtml" />
+    <None Include="Views\QrsContoller\Index.cshtml" />
+    <None Include="Views\Querry\Vendas.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.10" />

@@ -4,8 +4,6 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
 <h4>Fornecedor</h4>
 <hr />
 <div class="row">
@@ -17,30 +15,36 @@
                 <input asp-for="cnpj" class="form-control" />
                 <span asp-validation-for="cnpj" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="empresa" class="control-label"></label>
                 <input asp-for="empresa" class="form-control" />
                 <span asp-validation-for="empresa" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="telefone" class="control-label"></label>
                 <input asp-for="telefone" class="form-control" />
                 <span asp-validation-for="telefone" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <label asp-for="endereco" class="control-label"></label>
                 <input asp-for="endereco" class="form-control" />
                 <span asp-validation-for="endereco" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
+<br />
+
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

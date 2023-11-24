@@ -69,6 +69,7 @@ namespace MercadoIGL.Controllers
                 if (produto != null)
                 {
                     venda.valorTotal = produto.calcularTotal(venda.quantidade);
+                    produto.descontarEstoque(venda.quantidade);
 
                     _context.Add(venda);
                     await _context.SaveChangesAsync();

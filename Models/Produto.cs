@@ -36,5 +36,10 @@ namespace MercadoIGL.Models
             float total = qtde * valorUnitario;
             return total;
         }
+
+        public void descontarEstoque(int qtde)
+        {
+            this.estoque = estoque - qtde;
+        }
     }
 }
